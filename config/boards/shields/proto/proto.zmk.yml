@@ -1,0 +1,14 @@
+file_format: "1"
+id: proto
+name: Proto
+type: shield
+requires:
+  - pro_micro
+exposes:
+  - spi_oled
+features:
+  - keys
+  - display
+siblings:
+  - proto_left
+  - proto_right
