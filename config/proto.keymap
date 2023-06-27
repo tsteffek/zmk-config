@@ -53,7 +53,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        Base {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -121,6 +121,17 @@
             >;
 
             label = "Fun";
+        };
+
+        Gaming {
+            bindings = <
+&kp GRAVE         &kp Q  &kp X    &kp E      &kp R                 &trans  &trans  &trans  &trans  &trans
+  &kp TAB         &kp A  &kp W    &kp D      &kp F                 &trans  &trans  &trans  &trans  &trans
+&kp LSHFT         &kp Z  &kp S    &kp C      &kp V                 &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp LEFT_ALT         &kp ESC  &kp SPACE  &mo 3  &trans  &trans  &trans          &trans  &trans
+            >;
+
+            label = "Gaming";
         };
     };
 };
