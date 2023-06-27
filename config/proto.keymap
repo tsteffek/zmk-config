@@ -53,7 +53,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -64,7 +64,7 @@
 &trans           &kp W        &kp F             &kp P           &kp B                                    &kp J              &kp L        &kp U            &kp Y     &trans
  &kp Q  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &mt LEFT_GUI G                          &mt RIGHT_GUI M  &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I    &kp SQT
  &kp A           &kp X        &kp C             &kp D           &kp V                                    &kp K              &kp H    &kp COMMA          &kp DOT      &kp O
- &kp Z          &trans                      &lt 3 ESC     &lt 1 SPACE  &lt 2 TAB  &lt 1 ENTER  &lt 3 BACKSPACE          &lt 0 DEL                        &trans  &kp SLASH
+ &kp Z          &trans                      &lt 3 ESC     &lt 1 SPACE  &lt 2 TAB  &lt 1 ENTER  &lt 3 BACKSPACE            &kp DEL                        &trans  &kp SLASH
             >;
         };
 
@@ -81,10 +81,10 @@
 
         Media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &kp C_STOP      &kp C_VOL_UP      &trans  &ext_power EP_TOG
-&trans  &trans  &trans  &trans  &trans                  &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT             &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &kp C_MUTE      &kp C_VOL_DN  &bt BT_PRV         &bt BT_NXT
-&trans  &trans          &trans  &trans  &trans  &trans  &trans      &trans                        &trans             &trans
+&ext_power EP_TOG      &trans   &kp C_VOLUME_UP  &kp C_STOP  &trans                  &trans  &trans  &trans  &trans  &trans
+           &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans                  &trans  &trans  &trans  &trans  &trans
+       &bt BT_NXT  &bt BT_PRV      &kp C_VOL_DN  &kp C_MUTE  &trans                  &trans  &trans  &trans  &trans  &trans
+           &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans
             >;
 
             label = "Media";
