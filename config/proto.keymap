@@ -16,31 +16,37 @@
         braceL {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <4 14>;
+            layers = <0>;
         };
 
         parenL {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <3 13>;
+            layers = <0>;
         };
 
         brackL {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <12 2>;
+            layers = <0>;
         };
 
         braceR {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <5 15>;
+            layers = <0>;
         };
 
         parenR {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <6 16>;
+            layers = <0>;
         };
 
         brackR {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 17>;
+            layers = <0>;
         };
     };
 
