@@ -58,30 +58,19 @@
 &trans           &kp W        &kp F             &kp P           &kp B                                    &kp J              &kp L        &kp U            &kp Y     &trans
  &kp Q  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &mt LEFT_GUI G                          &mt RIGHT_GUI M  &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I    &kp SQT
  &kp A           &kp X        &kp C             &kp D           &kp V                                    &kp K              &kp H    &kp COMMA          &kp DOT      &kp O
- &kp Z          &trans                      &lt 4 ESC     &lt 1 SPACE  &lt 4 TAB  &lt 3 ENTER  &lt 4 BACKSPACE          &lt 2 DEL                        &trans  &kp SLASH
+ &kp Z          &trans                      &lt 3 ESC     &lt 1 SPACE  &lt 2 TAB  &lt 1 ENTER  &lt 3 BACKSPACE          &lt 0 DEL                        &trans  &kp SLASH
             >;
         };
 
         Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &kp K_CUT  &mt LC(PAGE_UP) PAGE_UP          &trans  &mt LC(PAGE_DOWN) PAGE_DOWN  &kp INSERT
+&trans  &trans  &trans  &trans  &trans                   &kp K_COPY           &kp LEFT_ARROW    &kp UP_ARROW              &kp RIGHT_ARROW      &trans
+&trans  &trans  &trans  &trans  &trans                  &kp K_PASTE        &mt LC(HOME) HOME  &kp DOWN_ARROW              &mt LC(END) END      &trans
+&trans  &trans          &trans  &trans  &trans  &trans       &trans                   &trans                                       &trans      &trans
             >;
 
             label = "Nav";
-        };
-
-        Mouse {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans
-            >;
-
-            label = "Mouse";
         };
 
         Media {
@@ -97,10 +86,10 @@
 
         Num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans                   &kp KP_NUMLOCK  &kp KP_NUMBER_7  &kp KP_NUMBER_8      &kp KP_NUMBER_9    &kp KP_DIVIDE
+&trans  &trans  &trans  &trans  &trans                     &kp KP_EQUAL  &kp KP_NUMBER_4  &kp KP_NUMBER_5      &kp KP_NUMBER_6  &kp KP_MULTIPLY
+&trans  &trans  &trans  &trans  &trans                  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2      &kp KP_NUMBER_3  &kp KP_SUBTRACT
+&trans  &trans          &trans  &trans  &trans  &trans           &trans           &trans                   &mt KP_DOT KP_COMMA      &kp KP_PLUS
             >;
 
             label = "Num";
