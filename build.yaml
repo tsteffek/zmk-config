@@ -17,5 +17,3 @@ include:
     shield: proto_left
   - board: nice_nano_v2
     shield: proto_right
-  - board: nice_nano_v2
-    shield: settings_reset
