@@ -48,6 +48,18 @@
             key-positions = <7 17>;
             layers = <0>;
         };
+
+        bootloadL {
+            bindings = <&bootloader>;
+            key-positions = <0 1>;
+            layers = <5>;
+        };
+
+        bootloadR {
+            bindings = <&bootloader>;
+            key-positions = <9 8>;
+            layers = <1>;
+        };
     };
 
     keymap {
