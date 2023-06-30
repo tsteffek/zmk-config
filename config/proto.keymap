@@ -70,7 +70,7 @@
 
         Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp K_CUT  &mt LC(PAGE_UP) PAGE_UP          &trans  &mt LC(PAGE_DOWN) PAGE_DOWN  &kp INSERT
+&trans  &trans  &trans  &trans  &trans                    &kp K_CUT  &mt LC(PAGE_UP) PAGE_UP         &kp INS  &mt LC(PAGE_DOWN) PAGE_DOWN  &sys_reset
 &trans  &trans  &trans  &trans  &trans                   &kp K_COPY           &kp LEFT_ARROW    &kp UP_ARROW              &kp RIGHT_ARROW      &trans
 &trans  &trans  &trans  &trans  &trans                  &kp K_PASTE        &mt LC(HOME) HOME  &kp DOWN_ARROW              &mt LC(END) END      &trans
 &trans  &trans          &trans  &trans  &trans  &trans       &trans                   &trans                                       &trans      &trans
@@ -114,10 +114,10 @@
 
         Fun {
             bindings = <
-&bootloader              &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN                  &trans  &trans  &trans  &trans  &trans
-    &kp F12              &kp F4  &kp F5  &kp F6   &kp SCROLLLOCK                  &trans  &trans  &trans  &trans  &trans
-    &kp F11              &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                  &trans  &trans  &trans  &trans  &trans
-    &kp F10  &kp K_CONTEXT_MENU          &trans           &trans  &trans  &trans  &trans  &trans          &trans  &trans
+&sys_reset              &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN                  &trans  &trans  &trans  &trans  &trans
+   &kp F12              &kp F4  &kp F5  &kp F6   &kp SCROLLLOCK                  &trans  &trans  &trans  &trans  &trans
+   &kp F11              &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                  &trans  &trans  &trans  &trans  &trans
+   &kp F10  &kp K_CONTEXT_MENU          &trans           &trans  &trans  &trans  &trans  &trans          &trans  &trans
             >;
 
             label = "Fun";
