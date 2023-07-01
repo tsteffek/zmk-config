@@ -77,7 +77,7 @@
 &trans           &kp W        &kp F             &kp P           &kp B                                  &kp J              &kp L        &kp U            &kp Y     &tog 6
  &kp Q  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &mt LEFT_GUI G                        &mt RIGHT_GUI M  &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I    &kp SQT
  &kp A           &kp X        &kp C             &kp D           &kp V                                  &kp K              &kp H    &kp COMMA          &kp DOT      &kp O
- &kp Z          &trans                      &lt 2 ESC     &lt 4 SPACE  &lt 5 TAB  &kp ENTER  &lt 1 BACKSPACE          &lt 3 DEL               &kp EXCLAMATION  &kp SLASH
+ &kp Z          &trans                      &lt 2 ENTER   &lt 4 SPACE  &lt 5 TAB  &kp ESC    &lt 1 BACKSPACE          &lt 3 DEL               &kp EXCLAMATION  &kp SLASH
             >;
         };
 
