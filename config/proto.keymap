@@ -61,6 +61,45 @@
             key-positions = <9 8>;
             layers = <1>;
         };
+
+        pwAdm {
+            bindings = <&PWAdm>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        pw1 {
+            bindings = <&PW1>;
+            key-positions = <0 2>;
+            layers = <0>;
+        };
+
+        pw12 {
+            bindings = <&PW12>;
+            key-positions = <0 3>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        PW12: PW12 {
+            compatible = "zmk,behavior-macro";
+            label = "PW12";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp X &kp J &kp N1 &kp F &kp G &kp J &kp N2 &kp LS(H) &kp LS(C) &kp LS(T) &kp STAR &kp A &kp P &kp H &kp N2 &kp R &kp Z &kp V>;
+        };
+        PW1: PW1 {
+            compatible = "zmk,behavior-macro";
+            label = "PW1";
+            #binding-cells = <0>;
+            bindings = <&kp LS(A) &kp POUND &kp N8 &kp LS(G) &kp LS(C) &kp L &kp LS(J) &kp N9 &kp LS(Q) &kp LS(C) &kp PRCNT &kp N3 &kp D &kp LS(P) &kp AT &kp LS(I) &kp N6 &kp W &kp N9 &kp LS(G) &kp CARET &kp W &kp I &kp X &kp L &kp W &kp O &kp AMPS &kp G &kp LS(W) &kp DLLR &kp J &kp LS(W) &kp N9 &kp LS(U) &kp N9 &kp B &kp J &kp I &kp A>;
+        };
+        PWAdm: PWAdm {
+            compatible = "zmk,behavior-macro";
+            label = "PWADM";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp FSLH &kp L &kp O &kp C &kp A &kp L &kp UNDER &kp A &kp D &kp M &kp TAB &kp LS(K) &kp EXCL &kp LS(J) &kp AT &kp E &kp J &kp LS(Y) &kp D &kp J &kp N9 &kp E &kp K>;
+        };
     };
 
     keymap {
@@ -74,10 +113,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp W        &kp F             &kp P           &kp B                                  &kp J              &kp L        &kp U            &kp Y     &tog 6
-  &kp Q  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &mt LEFT_GUI G                        &mt RIGHT_GUI M  &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I    &kp SQT
-  &kp A           &kp X        &kp C             &kp D           &kp V                                  &kp K              &kp H    &kp COMMA          &kp DOT      &kp O
-  &kp Z          &trans                    &lt 2 ENTER     &lt 4 SPACE  &lt 5 TAB  &kp ENTER  &lt 1 BACKSPACE          &lt 3 DEL               &kp EXCLAMATION  &kp SLASH
+&kp ESC           &kp W        &kp F             &kp P           &kp B                                    &kp J              &kp L        &kp U            &kp Y     &tog 6
+  &kp Q  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &mt LEFT_GUI G                          &mt RIGHT_GUI M  &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I    &kp SQT
+  &kp A           &kp X        &kp C             &kp D           &kp V                                    &kp K              &kp H    &kp COMMA          &kp DOT      &kp O
+  &kp Z          &trans                      &lt 2 TAB     &lt 4 SPACE  &lt 5 ENTER  &kp ENTER  &lt 1 BACKSPACE          &lt 3 DEL               &kp EXCLAMATION  &kp SLASH
             >;
         };
 
