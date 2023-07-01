@@ -98,7 +98,21 @@
             compatible = "zmk,behavior-macro";
             label = "PWADM";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp FSLH &kp L &kp O &kp C &kp A &kp L &kp UNDER &kp A &kp D &kp M &kp TAB &kp LS(K) &kp EXCL &kp LS(J) &kp AT &kp E &kp J &kp LS(Y) &kp D &kp J &kp N9 &kp E &kp K>;
+            bindings = <&kp DOT &kp BACKSLASH &kp L &kp O &kp C &kp A &kp L &kp UNDER &kp A &kp D &kp M &kp TAB &kp LS(K) &kp EXCL &kp LS(J) &kp AT &kp E &kp J &kp LS(Y) &kp D &kp J &kp N9 &kp E &kp K>;
+        };
+    };
+
+    behaviors {
+        GerSonderzeichen: GerSonderzeichen {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GERSONDERZEICHEN";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
         };
     };
 
