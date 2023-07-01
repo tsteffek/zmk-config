@@ -114,6 +114,18 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+        HomeRowMods: HomeRowMods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROWMODS";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -127,10 +139,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC           &kp W        &kp F             &kp P           &kp B                                    &kp J              &kp L        &kp U            &kp Y     &tog 6
-  &kp Q  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &mt LEFT_GUI G                          &mt RIGHT_GUI M  &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I    &kp SQT
-  &kp A           &kp X        &kp C             &kp D           &kp V                                    &kp K              &kp H    &kp COMMA          &kp DOT      &kp O
-  &kp Z          &trans                      &lt 2 TAB     &lt 4 SPACE  &lt 5 ENTER  &kp ENTER  &lt 1 BACKSPACE          &lt 3 DEL               &kp EXCLAMATION  &kp SLASH
+&kp ESC                &kp W                        &kp F                 &kp P                    &kp B                                             &kp J                  &kp L                 &kp U                &kp Y     &tog 6
+  &kp Q  &HomeRowMods LALT R  &HomeRowMods LEFT_CONTROL S  &HomeRowMods LSHFT T  &HomeRowMods LEFT_GUI G                          &HomeRowMods RIGHT_GUI M  &HomeRowMods RSHIFT N  &HomeRowMods RCTRL E  &HomeRowMods RALT I    &kp SQT
+  &kp A                &kp X                        &kp C                 &kp D                    &kp V                                             &kp K                  &kp H             &kp COMMA              &kp DOT      &kp O
+  &kp Z               &trans                                          &lt 2 TAB              &lt 4 SPACE  &lt 5 ENTER  &kp ENTER           &lt 1 BACKSPACE              &lt 3 DEL                            &kp EXCLAMATION  &kp SLASH
             >;
         };
 
