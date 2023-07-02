@@ -98,7 +98,7 @@
             compatible = "zmk,behavior-macro";
             label = "PWADM";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp BACKSLASH &kp L &kp O &kp C &kp A &kp L &kp UNDER &kp A &kp D &kp M &kp TAB &kp LS(K) &kp EXCL &kp LS(J) &kp AT &kp E &kp J &kp LS(Y) &kp D &kp J &kp N9 &kp E &kp K>;
+            bindings = <&kp DOT &kp NON_US_BACKSLASH &kp L &kp O &kp C &kp A &kp L &kp UNDER &kp A &kp D &kp M &kp TAB &kp LS(K) &kp EXCL &kp LS(J) &kp AT &kp E &kp J &kp LS(Y) &kp D &kp J &kp N9 &kp E &kp K>;
         };
     };
 
