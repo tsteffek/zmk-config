@@ -91,7 +91,7 @@
         };
 
         dash {
-            bindings = <&kp MINUS>;
+            bindings = <&kp SLASH>;
             key-positions = <18 28>;
         };
 
@@ -174,7 +174,7 @@
 &kp ESC                &kp W                        &kp F                  &kp P                    &kp B                                                            &kp J                     &kp L                 &kp U                &kp Y         &tog 6
   &kp Q  &HomeRowMods LALT R  &HomeRowMods LEFT_CONTROL S   &HomeRowMods LSHFT T  &HomeRowMods LEFT_GUI G                                         &HomeRowMods RIGHT_GUI M     &HomeRowMods RSHIFT N  &HomeRowMods RCTRL E  &HomeRowMods RALT I  &kp BACKSLASH
   &kp A                &kp X                        &kp C                  &kp D                    &kp V                                                            &kp K                     &kp H               &kp SQT     &kp LEFT_BRACKET          &kp O
-  &kp Z               &trans                               &ThumbLayerMods 2 TAB  &ThumbLayerMods 4 SPACE  &ThumbLayerMods 5 ENTER  &kp ENTER  &ThumbLayerMods 1 BACKSPACE  &ThumbLayerMods 3 DELETE                                  &kp MINUS  &kp SEMICOLON
+  &kp Z               &trans                               &ThumbLayerMods 2 TAB  &ThumbLayerMods 5 SPACE  &ThumbLayerMods 5 ENTER  &kp ENTER  &ThumbLayerMods 1 BACKSPACE  &ThumbLayerMods 4 DELETE                                  &kp MINUS  &kp SEMICOLON
             >;
         };
 
@@ -238,7 +238,7 @@
 &kp GRAVE         &kp Q  &kp X    &kp E      &kp R                 &trans  &trans  &trans  &trans  &trans
   &kp TAB         &kp A  &kp W    &kp D      &kp F                 &trans  &trans  &trans  &trans  &trans
 &kp LSHFT         &kp Z  &kp S    &kp C      &kp V                 &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp LEFT_ALT         &kp ESC  &kp SPACE  &mo 3  &trans  &trans  &trans          &trans  &trans
+&kp LCTRL  &kp LEFT_ALT         &kp ESC  &kp SPACE  &mo 4  &trans  &trans  &trans          &trans  &trans
             >;
 
             label = "Gaming";
