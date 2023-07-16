@@ -74,8 +74,8 @@
             layers = <0>;
         };
 
-        pw12 {
-            bindings = <&PW12>;
+        pw1f {
+            bindings = <&PW1F>;
             key-positions = <0 3>;
             layers = <0>;
         };
@@ -102,23 +102,23 @@
     };
 
     macros {
-        PW12: PW12 {
-            compatible = "zmk,behavior-macro";
-            label = "PW12";
-            #binding-cells = <0>;
-            bindings = <&kp C &kp X &kp J &kp N1 &kp F &kp G &kp J &kp N2 &kp LS(H) &kp LS(C) &kp LS(T) &kp STAR &kp A &kp P &kp H &kp N2 &kp R &kp Z &kp V>;
-        };
         PW1: PW1 {
             compatible = "zmk,behavior-macro";
             label = "PW1";
             #binding-cells = <0>;
-            bindings = <&kp LS(A) &kp POUND &kp N8 &kp LS(G) &kp LS(C) &kp L &kp LS(J) &kp N9 &kp LS(Q) &kp LS(C) &kp PRCNT &kp N3 &kp D &kp LS(P) &kp AT &kp LS(I) &kp N6 &kp W &kp N9 &kp LS(G) &kp CARET &kp W &kp I &kp X &kp L &kp W &kp O &kp AMPS &kp G &kp LS(W) &kp DLLR &kp J &kp LS(W) &kp N9 &kp LS(U) &kp N9 &kp B &kp J &kp I &kp A>;
+            bindings = <&kp LS(A) &kp BACKSLASH &kp N8 &kp LS(G) &kp LS(C) &kp L &kp LS(J) &kp N9 &kp LS(Q) &kp LS(C) &kp LS(NUMBER_5) &kp N3 &kp D &kp LS(P) &kp RA(Q) &kp LS(I) &kp N6 &kp W &kp N9 &kp LS(G) &kp GRAVE &kp W &kp I &kp X &kp L &kp W &kp O &kp LS(NUMBER_6) &kp G &kp LS(W) &kp LS(NUMBER_4) &kp J &kp LS(W) &kp N9 &kp LS(U) &kp N9 &kp B &kp J &kp I &kp A>;
+        };
+        PW1F: PW1F {
+            compatible = "zmk,behavior-macro";
+            label = "PW1F";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp X &kp J &kp N1 &kp F &kp G &kp J &kp N2 &kp LS(H) &kp LS(C) &kp LS(T) &kp LS(RIGHT_BRACKET) &kp A &kp P &kp H &kp N2 &kp R &kp Z &kp V>;
         };
         PWAdm: PWAdm {
             compatible = "zmk,behavior-macro";
             label = "PWADM";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp NON_US_BACKSLASH &kp L &kp O &kp C &kp A &kp L &kp UNDER &kp A &kp D &kp M &kp TAB &kp LS(K) &kp EXCL &kp LS(J) &kp AT &kp E &kp J &kp LS(Y) &kp D &kp J &kp N9 &kp E &kp K>;
+            bindings = <&kp DOT &kp RA(MINUS) &kp L &kp O &kp C &kp A &kp L &kp LS(SLASH) &kp A &kp D &kp M &kp TAB &kp LS(K) &kp LS(NUMBER_1) &kp LS(J) &kp RA(Q) &kp E &kp J &kp LS(Z) &kp D &kp J &kp N9 &kp E &kp K>;
         };
     };
 
