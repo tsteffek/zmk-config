@@ -112,7 +112,7 @@
             compatible = "zmk,behavior-macro";
             label = "PW1F";
             #binding-cells = <0>;
-            bindings = <&kp C &kp X &kp J &kp N1 &kp F &kp G &kp J &kp N2 &kp LS(H) &kp LS(C) &kp LS(T) &kp LS(RIGHT_BRACKET) &kp A &kp P &kp H &kp N2 &kp R &kp Z &kp V>;
+            bindings = <&kp C &kp X &kp J &kp N1 &kp F &kp G &kp J &kp N2 &kp LS(H) &kp LS(C) &kp LS(T) &kp LS(RIGHT_BRACKET) &kp A &kp P &kp H &kp N2 &kp R &kp Y &kp V>;
         };
         PWAdm: PWAdm {
             compatible = "zmk,behavior-macro";
