@@ -36,7 +36,7 @@ RC(3,0) RC(3,1)         RC(2,7) RC(2,6) RC(2,5)  RC(2,15) RC(2,14)  RC(2,13)    
             , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
-
+        wakeup-source;
     };
 };
 
