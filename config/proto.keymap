@@ -129,10 +129,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC  &kp W                &kp F                        &kp P                  &kp B                                                        &kp J                        &kp L                     &kp U                 &kp Y                &tog 6
-&kp Q    &HomeRowMods LALT R  &HomeRowMods LEFT_CONTROL S  &HomeRowMods LSHFT T   &HomeRowMods LEFT_GUI G                                      &HomeRowMods RIGHT_GUI M     &HomeRowMods RSHIFT N     &HomeRowMods RCTRL E  &HomeRowMods RALT I  &kp BACKSLASH
-&kp A    &kp X                &kp C                        &kp D                  &kp V                                                        &kp K                        &kp H                     &kp SQT               &kp LEFT_BRACKET     &kp O
-&kp Z    &trans                                            &ThumbLayerMods 2 TAB  &ThumbLayerMods 4 SPACE  &ThumbLayerMods 5 ENTER  &kp ENTER  &ThumbLayerMods 1 BACKSPACE  &ThumbLayerMods 3 DELETE                        &kp MINUS            &kp SEMICOLON
+&kp ESC  &kp W                &kp F                        &kp P                  &kp B                                                                      &kp J                        &kp L                     &kp U                 &kp Y                &tog 6
+&kp Q    &HomeRowMods LALT R  &HomeRowMods LEFT_CONTROL S  &HomeRowMods LSHFT T   &HomeRowMods LEFT_GUI G                                                    &HomeRowMods RIGHT_GUI M     &HomeRowMods RSHIFT N     &HomeRowMods RCTRL E  &HomeRowMods RALT I  &kp BACKSLASH
+&kp A    &kp X                &kp C                        &kp D                  &kp V                                                                      &kp K                        &kp H                     &kp SQT               &kp LEFT_BRACKET     &kp O
+&kp Z    &trans                                            &ThumbLayerMods 2 TAB  &ThumbLayerMods 4 SPACE  &ThumbLayerMods 5 ENTER  &ThumbLayerMods 7 ENTER  &ThumbLayerMods 1 BACKSPACE  &ThumbLayerMods 3 DELETE                        &kp MINUS            &kp SEMICOLON
             >;
         };
 
