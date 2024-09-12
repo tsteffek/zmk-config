@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
@@ -62,24 +63,6 @@
             layers = <1>;
         };
 
-        pwAdm {
-            bindings = <&PWAdm>;
-            key-positions = <0 1>;
-            layers = <0>;
-        };
-
-        pw1 {
-            bindings = <&PW1>;
-            key-positions = <0 2>;
-            layers = <0>;
-        };
-
-        pw1f {
-            bindings = <&PW1F>;
-            key-positions = <0 3>;
-            layers = <0>;
-        };
-
         dot {
             bindings = <&kp DOT>;
             key-positions = <16 26>;
@@ -101,57 +84,32 @@
         };
     };
 
-    macros {
-        PW1: PW1 {
-            compatible = "zmk,behavior-macro";
-            label = "PW1";
-            #binding-cells = <0>;
-            bindings = <&kp LS(A) &kp BACKSLASH &kp N8 &kp LS(G) &kp LS(C) &kp L &kp LS(J) &kp N9 &kp LS(Q) &kp LS(C) &kp LS(NUMBER_5) &kp N3 &kp D &kp LS(P) &kp RA(Q) &kp LS(I) &kp N6 &kp W &kp N9 &kp LS(G) &kp GRAVE &kp W &kp I &kp X &kp L &kp W &kp O &kp LS(NUMBER_6) &kp G &kp LS(W) &kp LS(NUMBER_4) &kp J &kp LS(W) &kp N9 &kp LS(U) &kp N9 &kp B &kp J &kp I &kp A>;
-        };
-        PW1F: PW1F {
-            compatible = "zmk,behavior-macro";
-            label = "PW1F";
-            #binding-cells = <0>;
-            bindings = <&kp C &kp X &kp J &kp N1 &kp F &kp G &kp J &kp N2 &kp LS(H) &kp LS(C) &kp LS(T) &kp LS(RIGHT_BRACKET) &kp A &kp P &kp H &kp N2 &kp R &kp Y &kp V>;
-        };
-        PWAdm: PWAdm {
-            compatible = "zmk,behavior-macro";
-            label = "PWADM";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp RA(MINUS) &kp L &kp O &kp C &kp A &kp L &kp LS(SLASH) &kp A &kp D &kp M &kp TAB &kp LS(K) &kp LS(NUMBER_1) &kp LS(J) &kp RA(Q) &kp E &kp J &kp LS(Z) &kp D &kp J &kp N9 &kp E &kp K>;
-        };
-    };
-
     behaviors {
         GerSonderzeichen: GerSonderzeichen {
             compatible = "zmk,behavior-hold-tap";
             label = "GERSONDERZEICHEN";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
         HomeRowMods: HomeRowMods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROWMODS";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
             flavor = "balanced";
         };
+
         ThumbLayerMods: ThumbLayerMods {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMBLAYERMODS";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -171,19 +129,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC                &kp W                        &kp F                  &kp P                    &kp B                                                            &kp J                     &kp L                 &kp U                &kp Y         &tog 6
-  &kp Q  &HomeRowMods LALT R  &HomeRowMods LEFT_CONTROL S   &HomeRowMods LSHFT T  &HomeRowMods LEFT_GUI G                                         &HomeRowMods RIGHT_GUI M     &HomeRowMods RSHIFT N  &HomeRowMods RCTRL E  &HomeRowMods RALT I  &kp BACKSLASH
-  &kp A                &kp X                        &kp C                  &kp D                    &kp V                                                            &kp K                     &kp H               &kp SQT     &kp LEFT_BRACKET          &kp O
-  &kp Z               &trans                               &ThumbLayerMods 2 TAB  &ThumbLayerMods 4 SPACE  &ThumbLayerMods 5 ENTER  &kp ENTER  &ThumbLayerMods 1 BACKSPACE  &ThumbLayerMods 3 DELETE                                  &kp MINUS  &kp SEMICOLON
+&kp ESC  &kp W                &kp F                        &kp P                  &kp B                                                        &kp J                        &kp L                     &kp U                 &kp Y                &tog 6
+&kp Q    &HomeRowMods LALT R  &HomeRowMods LEFT_CONTROL S  &HomeRowMods LSHFT T   &HomeRowMods LEFT_GUI G                                      &HomeRowMods RIGHT_GUI M     &HomeRowMods RSHIFT N     &HomeRowMods RCTRL E  &HomeRowMods RALT I  &kp BACKSLASH
+&kp A    &kp X                &kp C                        &kp D                  &kp V                                                        &kp K                        &kp H                     &kp SQT               &kp LEFT_BRACKET     &kp O
+&kp Z    &trans                                            &ThumbLayerMods 2 TAB  &ThumbLayerMods 4 SPACE  &ThumbLayerMods 5 ENTER  &kp ENTER  &ThumbLayerMods 1 BACKSPACE  &ThumbLayerMods 3 DELETE                        &kp MINUS            &kp SEMICOLON
             >;
         };
 
         Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp K_CUT          &kp PG_UP         &kp INS    &kp PAGE_DOWN  &sys_reset
-&trans  &trans  &trans  &trans  &trans                   &kp K_COPY     &kp LEFT_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW      &trans
-&trans  &trans  &trans  &trans  &trans                  &kp K_PASTE  &mt LC(HOME) HOME  &kp DOWN_ARROW  &mt LC(END) END      &trans
-&trans  &trans          &trans  &trans  &trans  &trans       &trans             &trans                           &trans      &trans
+&trans  &trans  &trans  &trans  &trans                  &kp K_CUT    &kp PG_UP          &kp INS         &kp PAGE_DOWN    &sys_reset
+&trans  &trans  &trans  &trans  &trans                  &kp K_COPY   &kp LEFT_ARROW     &kp UP_ARROW    &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans                  &kp K_PASTE  &mt LC(HOME) HOME  &kp DOWN_ARROW  &mt LC(END) END  &trans
+&trans  &trans          &trans  &trans  &trans  &trans  &trans       &trans                             &trans           &trans
             >;
 
             label = "Nav";
@@ -191,10 +149,10 @@
 
         Media {
             bindings = <
-&ext_power EP_TOG        &trans   &kp C_VOLUME_UP  &kp C_STOP  &bt BT_CLR                  &trans  &trans  &trans  &trans  &trans
-     &out OUT_TOG    &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT      &trans                  &trans  &trans  &trans  &trans  &trans
-       &bt BT_NXT    &bt BT_PRV      &kp C_VOL_DN  &kp C_MUTE      &trans                  &trans  &trans  &trans  &trans  &trans
-     &bt BT_SEL 0  &bt BT_SEL 1                        &trans      &trans  &trans  &trans  &trans  &trans          &trans  &trans
+&ext_power EP_TOG  &trans        &kp C_VOLUME_UP   &kp C_STOP  &bt BT_CLR                  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG       &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT  &trans                      &trans  &trans  &trans  &trans  &trans
+&bt BT_NXT         &bt BT_PRV    &kp C_VOL_DN      &kp C_MUTE  &trans                      &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0       &bt BT_SEL 1                    &trans      &trans      &trans  &trans  &trans  &trans          &trans  &trans
             >;
 
             label = "Media";
@@ -202,10 +160,10 @@
 
         Num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                   &kp KP_NUMLOCK  &kp KP_NUMBER_7  &kp KP_NUMBER_8      &kp KP_NUMBER_9    &kp KP_DIVIDE
-&trans  &trans  &trans  &trans  &trans                     &kp KP_EQUAL  &kp KP_NUMBER_4  &kp KP_NUMBER_5      &kp KP_NUMBER_6  &kp KP_MULTIPLY
-&trans  &trans  &trans  &trans  &trans                  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2      &kp KP_NUMBER_3  &kp KP_SUBTRACT
-&trans  &trans          &trans  &trans  &trans  &trans           &trans           &trans                   &mt KP_DOT KP_COMMA      &kp KP_PLUS
+&trans  &trans  &trans  &trans  &trans                  &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9      &kp KP_DIVIDE
+&trans  &trans  &trans  &trans  &trans                  &kp KP_EQUAL     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6      &kp KP_MULTIPLY
+&trans  &trans  &trans  &trans  &trans                  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3      &kp KP_SUBTRACT
+&trans  &trans          &trans  &trans  &trans  &trans  &trans           &trans                            &mt KP_DOT KP_COMMA  &kp KP_PLUS
             >;
 
             label = "Num";
@@ -213,10 +171,10 @@
 
         Sym {
             bindings = <
-           &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                  &trans  &trans  &trans  &trans  &trans
-        &kp GRAVE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                  &trans  &trans  &trans  &trans  &trans
-     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp PIPE                  &trans  &trans  &trans  &trans  &trans
-&kp RIGHT_BRACKET        &trans                      &trans     &trans  &trans  &trans  &trans  &trans          &trans  &trans
+&trans             &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS                  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PIPE                   &trans  &trans  &trans  &trans  &trans
+&kp RIGHT_BRACKET  &trans                      &trans        &trans     &trans  &trans  &trans  &trans          &trans  &trans
             >;
 
             label = "Sym";
@@ -224,10 +182,10 @@
 
         Fun {
             bindings = <
-&sys_reset              &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN                  &trans  &trans  &trans  &trans  &trans
-   &kp F12              &kp F4  &kp F5  &kp F6   &kp SCROLLLOCK                  &trans  &trans  &trans  &trans  &trans
-   &kp F11              &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                  &trans  &trans  &trans  &trans  &trans
-   &kp F10  &kp K_CONTEXT_MENU          &trans           &trans  &trans  &trans  &trans  &trans          &trans  &trans
+&sys_reset  &kp F7              &kp F8  &kp F9  &kp PRINTSCREEN                  &trans  &trans  &trans  &trans  &trans
+&kp F12     &kp F4              &kp F5  &kp F6  &kp SCROLLLOCK                   &trans  &trans  &trans  &trans  &trans
+&kp F11     &kp F1              &kp F2  &kp F3  &kp PAUSE_BREAK                  &trans  &trans  &trans  &trans  &trans
+&kp F10     &kp K_CONTEXT_MENU          &trans  &trans           &trans  &trans  &trans  &trans          &trans  &trans
             >;
 
             label = "Fun";
@@ -235,13 +193,22 @@
 
         Gaming {
             bindings = <
-&kp GRAVE         &kp Q  &kp X    &kp E      &kp R                 &trans  &trans  &trans  &trans  &trans
-  &kp TAB         &kp A  &kp W    &kp D      &kp F                 &trans  &trans  &trans  &trans  &trans
-&kp LSHFT         &kp Z  &kp S    &kp C      &kp V                 &trans  &trans  &trans  &trans  &trans
+&kp GRAVE  &kp Q         &kp X  &kp E    &kp R                     &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp A         &kp W  &kp D    &kp F                     &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp Z         &kp S  &kp C    &kp V                     &trans  &trans  &trans  &trans  &trans
 &kp LCTRL  &kp LEFT_ALT         &kp ESC  &kp SPACE  &mo 3  &trans  &trans  &trans          &trans  &trans
             >;
 
             label = "Gaming";
+        };
+
+        Mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans          &mmv MOVE_DOWN  &trans           &mkp LCLK
+&trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                          &mkp MCLK        &mkp RCLK
+            >;
         };
     };
 };
