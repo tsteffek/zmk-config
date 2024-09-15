@@ -5,7 +5,7 @@ type: shield
 requires:
   - pro_micro
 exposes:
-  - spi_oled
+  - nice_view_spi
 features:
   - keys
   - display
