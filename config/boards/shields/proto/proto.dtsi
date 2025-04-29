@@ -61,5 +61,5 @@ RC(3,0) RC(3,1)         RC(2,7) RC(2,6) RC(2,5)  RC(2,13) RC(2,14)  RC(2,15)    
 };
 
 nice_view_spi: &spi1 {
-        cs-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
 };
