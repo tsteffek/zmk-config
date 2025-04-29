@@ -1,9 +1,5 @@
 #include "proto.dtsi" // Notice that the main dtsi files are included in the overlay.
 
-&glidepoint_listener {
-    status = "okay";
-};
-
 &kscan0 {
     col-gpios
         = <&pro_micro 0 GPIO_ACTIVE_HIGH> // col0 in the schematic
@@ -16,3 +12,11 @@
         , <&pro_micro 5 GPIO_ACTIVE_HIGH> // col7 in the schematic
         ;
 };
+
+// ----- Pointing device
+
+&glidepoint_listener {
+    status = "okay";
+};
+
+// ----- Pointing device end
