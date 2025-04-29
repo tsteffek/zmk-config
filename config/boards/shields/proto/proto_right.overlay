@@ -19,12 +19,12 @@
 
 // ----- Pointing device
 
-/ {
+/{
     chosen {
+        zmk,input-split = &glidepoint_split;
         zmk,pointing-device = &glidepoint;
     };
 };
-
 &pinctrl {
     spi1_default: spi1_default {
         group1 {
