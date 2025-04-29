@@ -13,11 +13,17 @@ if SHIELD_PROTO_RIGHT
 config ZMK_KEYBOARD_NAME
     default "Proto_R"
 
+config SPI
+    default y
+
 endif
 
 if SHIELD_PROTO_LEFT || SHIELD_PROTO_RIGHT
 
 config ZMK_SPLIT
+    default y
+
+config ZMK_POINTING
     default y
 
 endif
