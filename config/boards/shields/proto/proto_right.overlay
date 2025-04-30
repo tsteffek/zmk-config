@@ -38,14 +38,14 @@
     };
 };
 
-&spi1 {
+pro_micro_spi: &spi1 {
     compatible = "nordic,nrf-spi";
     status = "okay";
     pinctrl-0 = <&spi1_default>;
     pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
 
-    cs-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&pro_micro 7 GPIO_ACTIVE_LOW>;
 
     glidepoint: glidepoint@0 {
         compatible = "cirque,pinnacle";
@@ -60,13 +60,9 @@
     };
 };
 
-pro_micro_spi: &spi1 {};
-
 &glidepoint_split {
     device = <&glidepoint>;
 
     // Optional
     // input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };
-
-// ----- Pointing device end
