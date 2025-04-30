@@ -13,10 +13,14 @@
         ;
 };
 
+// ----- Nice View
+
+nice_view_spi: &spi1 {
+    cs-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
+};
+
 // ----- Pointing device
 
 &glidepoint_listener {
     status = "okay";
 };
-
-// ----- Pointing device end
